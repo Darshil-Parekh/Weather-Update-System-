@@ -1,3 +1,4 @@
 {
-  "editor.inlineSuggest.enabled": false
+  "editor.inlineSuggest.enabled": false,
+  "liveServer.settings.CustomBrowser": "chrome"
 }
