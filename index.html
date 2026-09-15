@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand"><span>☁</span> WeatherNow</div>
+            <button id="unitToggle" class="unit-btn" type="button">°C / °F</button>
+        </header>
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">LIVE WEATHER</p>
+                <h1>Check the weather<br>anywhere.</h1>
+                <p class="subtitle">Search a city to see current conditions and a 5-day forecast.</p>
+            </div>
+            <form id="searchForm" class="search">
+                <input id="cityInput" type="text" placeholder="Search city..." autocomplete="off" required>
+                <button type="submit">Search</button>
+            </form>
+            <button id="locationBtn" class="location-btn" type="button">📍 Use my location</button>
+        </section>
+
+        <section id="status" class="status" aria-live="polite"></section>
+
+        <section id="weatherPanel" class="weather-panel hidden">
+            <div class="current-card">
+                <div class="location-row">
+                    <div>
+                        <p id="dateText" class="muted"></p>
+                        <h2 id="cityName">—</h2>
+                        <p id="description">—</p>
+                    </div>
+                    <img id="weatherIcon" src="" alt="" class="weather-icon">
+                </div>
+
+                <div class="temperature-row">
+                    <span id="temperature">—</span><span id="degree">°C</span>
+                </div>
+
+                <p class="feels">Feels like <strong id="feelsLike">—</strong></p>
+
+                <div class="details-grid">
+                    <div><span>💧 Humidity</span><strong id="humidity">—</strong></div>
+                    <div><span>💨 Wind</span><strong id="wind">—</strong></div>
+                    <div><span>🔽 Pressure</span><strong id="pressure">—</strong></div>
+                    <div><span>👁 Visibility</span><strong id="visibility">—</strong></div>
+                    <div><span>🌅 Sunrise</span><strong id="sunrise">—</strong></div>
+                    <div><span>🌇 Sunset</span><strong id="sunset">—</strong></div>
+                </div>
+            </div>
+
+            <div class="forecast-card">
+                <div class="section-heading">
+                    <h3>5-Day Forecast</h3>
+                    <span id="forecastUnit">°C</span>
+                </div>
+                <div id="forecast" class="forecast-grid"></div>
+            </div>
+        </section>
+
+        <footer>Weather data provided by OpenWeather</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
