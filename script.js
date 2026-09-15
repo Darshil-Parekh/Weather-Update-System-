@@ -5,7 +5,7 @@
   2. Open the project through a local server (VS Code Live Server is easiest).
 */
 
-const API_KEY = "PASTE_YOUR_REAL_WEATHERAPI_KEY_HERE";
+const API_KEY = "08e6c4182d6345278e4111545261509";
 const PLACEHOLDER_KEYS = [
   "YOUR_WEATHERAPI_KEY",
   "PASTE_YOUR_REAL_WEATHERAPI_KEY_HERE"
